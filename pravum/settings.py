@@ -171,6 +171,6 @@ AWS_DEFAULT_ACL = "public-read"
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, 'mediafiles')
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, 'staticfiles')
-DEFAULT_FILE_STORAGE = "pravum.custom_storages.MediaStorage"
-STATICFILES_STORAGE = "pravum.custom_storages.StaticStorage"
+DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
+STATICFILES_STORAGE = "custom_storages.StaticStorage"
 
