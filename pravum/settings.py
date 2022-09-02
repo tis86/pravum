@@ -13,7 +13,6 @@ import os
 import sys
 import mimetypes
 import dj_database_url
-from .cdn.conf import *
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 from django.conf import settings
@@ -54,7 +53,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-    'storages',
 ]
 
 MIDDLEWARE = [
@@ -172,6 +170,6 @@ AWS_DEFAULT_ACL = "public-read"
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 MEDIA_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, 'mediafiles')
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, 'staticfiles')
-DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
-STATICFILES_STORAGE = "custom_storages.MediaStorage"
+DEFAULT_FILE_STORAGE = "pravum.custom_storages.MediaStorage"
+STATICFILES_STORAGE = "pravum.custom_storages.StaticStorage"
 
