@@ -15,6 +15,7 @@ import mimetypes
 import dj_database_url
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
+from django.conf import settings
 
 mimetypes.add_type("text/css", ".css", True)
 
@@ -26,8 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-k8_lx$_w1(nvzuxv)#6wpkr)skn1iy4@e40!npbhcz(mx!$1)k'
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
+SECRET_KEY = 'django-insecure-k8_lx$_w1(nvzuxv)#6wpkr)skn1iy4@e40!npbhcz(mx!$1)k'
+#SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -145,9 +146,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_URL = '/statica/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'), ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
