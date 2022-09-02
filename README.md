@@ -9,7 +9,7 @@
 6. pip install requirements.txt
 7. ./manage.py makemigrations && ./manage.py migrate
 
-## THERE THRE TYPES OF STARTING
+## THERE TWO TYPES OF STARTING
 
 ### THIRST USING DEFAULT FROM DJANGO
 1. In project dir you have to run this command(but there will be some errors
