@@ -172,4 +172,4 @@ MEDIA_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, 'mediafiles')
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, 'staticfiles')
 DEFAULT_FILE_STORAGE = "custom_storages.MediaStorage"
 STATICFILES_STORAGE = "custom_storages.StaticStorage"
-
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
